@@ -1,7 +1,21 @@
 import React, { Component } from 'react'
 import NewsItem from './NewsItem'
+import PropTypes from 'prop-types'
+
+
 
 export default class News extends Component {
+  static defaultProps = {
+    country: 'in',
+    pageSize: 10,
+    category:'science',
+  }
+  static  propTypes = {
+    country:PropTypes.string,
+    pageSize: PropTypes.number,
+    category:PropTypes.string,
+  }
+
 
   articles = [
     {
@@ -1303,57 +1317,1507 @@ export default class News extends Component {
       "urlToImage": "https://i.guim.co.uk/img/media/c74e1c31849165059d4db511593c093535fc9a7a/103_0_2092_1255/master/2092.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctb3BpbmlvbnMucG5n&enable=upscale&s=8a92d285382c961c1b6c5add504ab656",
       "publishedAt": "2023-07-17T09:00:25Z",
       "content": "In the past year, some of the UKs most recognised institutions, from the Guardian to Royal Mail, have been hit with the defining cyber crime of our time: ransomware. Hackers locking up computer netwo… [+6349 chars]"
+
+    },
+
+
+    {
+      "source": {
+        "id": "engadget",
+        "name": "Engadget"
+      },
+      "author": "Sarah Fielding",
+      "title": "WhatsApp makes it easier to send messages to unsaved numbers",
+      "description": "Every app has one flaw that is baffling in how unnecessarily complicated it is. For WhatsApp, that has always been the fact that you can only message people after first saving their contact. But the frustrating extra step is finally gone: A WhatsApp update is…",
+      "url": "https://www.engadget.com/whatsapp-makes-it-easier-to-send-messages-to-unsaved-numbers-093511724.html",
+      "urlToImage": "https://s.yimg.com/uu/api/res/1.2/JFrcoFjrBRllvF8Z7y6ETg--~B/Zmk9ZmlsbDtoPTYzMDtweW9mZj0wO3c9MTIwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/reuters.com/03c084f4fcef33110f6d89320da04a26.cf.jpg",
+      "publishedAt": "2023-07-20T09:35:11Z",
+      "content": "Every app has one flaw that is baffling in how unnecessarily complicated it is. For WhatsApp, that has always been the fact that you can only message people after first saving their contact. But the … [+1151 chars]"
+    },
+    {
+      "source": {
+        "id": "engadget",
+        "name": "Engadget"
+      },
+      "author": "Jon Fingas",
+      "title": "Apple's MacBook Air M1 is back on sale for $750",
+      "description": "This is a great moment to get a Mac laptop on a budget, particularly if you're heading back to school. Amazon has the MacBook Air M1 with 256GB of storage on sale for a record low of $750, or $249 off. That's the same price we saw on Prime Day, and applies re…",
+      "url": "https://www.engadget.com/apples-macbook-air-m1-is-back-on-sale-for-750-160059819.html",
+      "urlToImage": "https://s.yimg.com/uu/api/res/1.2/DJS5IjlRzoxgDMBdp__.pQ--~B/Zmk9ZmlsbDtoPTYzMDtweW9mZj0wO3c9MTIwMDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2023-07/ad93dca0-2711-11ee-bffb-5c2ddddbf361.cf.jpg",
+      "publishedAt": "2023-07-20T16:00:59Z",
+      "content": "This is a great moment to get a Mac laptop on a budget, particularly if you're heading back to school. Amazon has the MacBook Air M1 with 256GB of storage on sale for a record low of $750, or $249 of… [+1072 chars]"
+    },
+    {
+      "source": {
+        "id": "engadget",
+        "name": "Engadget"
+      },
+      "author": "Steve Dent",
+      "title": "YouTube Premium quietly goes up in price to $14 per month",
+      "description": "Google has quietly increased the price of YouTube Premium by a significant $2 from $12 to $14, according to the updated signup page spotted by 9to5Google. The annual price jumped to $20, from $120 to $140 per month, a savings of about $28 over paying month-by…",
+      "url": "https://www.engadget.com/youtube-premium-quietly-goes-up-in-price-to-14-per-month-100531473.html",
+      "urlToImage": "https://s.yimg.com/uu/api/res/1.2/e3v5dPnYvuaFg2xCeWChCA--~B/Zmk9ZmlsbDtoPTYzMDtweW9mZj0wO3c9MTIwMDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2022-08/6650f7f0-14b2-11ed-ba7b-70623770e37e.cf.jpg",
+      "publishedAt": "2023-07-20T10:05:31Z",
+      "content": "Google has quietly increased the price of YouTube Premium by a significant $2 from $12 to $14, according to the updated signup page spotted by 9to5Google. The annual price jumped to $20, from $120 to… [+1358 chars]"
+    },
+    {
+      "source": {
+        "id": "ars-technica",
+        "name": "Ars Technica"
+      },
+      "author": "Chuong Nguyen",
+      "title": "Dealmaster: Apple gear, Lenovo laptops, and more",
+      "description": "We found discounts on laptops, board games, and back-to-school equipment.",
+      "url": "https://arstechnica.com/shopping/2023/07/dealmaster-apple-gear-lenovo-laptops-steam-deck-and-more/",
+      "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2023/06/IMG_1204-760x380.jpeg",
+      "publishedAt": "2023-07-20T18:35:33Z",
+      "content": "Enlarge/ Lenovo's ThinkPad X1 Carbon Gen 11, which not-confusingly-at-all feature 13th-generation Intel Core processors.\r\n10 with \r\nAs always, the web is loaded today with good deals on gadgets, vide… [+17281 chars]"
+    },
+    {
+      "source": {
+        "id": "ars-technica",
+        "name": "Ars Technica"
+      },
+      "author": "Samuel Axon",
+      "title": "Report: Apple has already built its own ChatGPT-like chatbot",
+      "description": "The tool is being used internally by employees—with some major restrictions.",
+      "url": "https://arstechnica.com/gadgets/2023/07/report-apple-has-already-built-its-own-chatgpt-like-chatbot/",
+      "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2023/07/iOS-14-header-800x481-1-760x380.jpg",
+      "publishedAt": "2023-07-20T20:56:06Z",
+      "content": "Enlarge/ Apple's current AI assistant, Siri, is far less capablebut also less error-pronethan tools like Bard or ChatGPT.\r\n2 with \r\nApple has built its own large language model (LLM) AI framework and… [+2996 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Android Central"
+      },
+      "author": "christinep2424@gmail.com (Christine Persaud)",
+      "title": "iPad Pro (2022) vs. Samsung Galaxy Tab S8",
+      "description": "If you're trying to decide between the iPad Pro (2022) and Samsung Galaxy Tab S8, both premium tablets, we break things down to help.",
+      "url": "https://www.androidcentral.com/tablets/ipad-pro-2022-vs-samsung-galaxy-tab-s8",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/CshxFMfaVEjCt548f4t7mK-1200-80.jpeg",
+      "publishedAt": "2023-07-20T17:25:47Z",
+      "content": "So, you’re trying to decide between the iPad Pro (2022) vs. Samsung Galaxy Tab S8. The decision seems easy: if you have an Apple iPhone, you’d get more out of an iPad Pro (2022), whereas if you use a… [+12034 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Android Central"
+      },
+      "author": "nicholas.sutrich@futurenet.com (Nicholas Sutrich)",
+      "title": "I Expect You To Die 3 hands-on: Not all missions are impossible",
+      "description": "I Expect You To Die 3 is one of VR's most anticipated games ever, but how has the series aged over the years? We went hands on with the first three missions.",
+      "url": "https://www.androidcentral.com/gaming/virtual-reality/i-expect-you-to-die-3-hands-on",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/UbCT6NYivbuWwMhigozNDU-1200-80.jpg",
+      "publishedAt": "2023-07-20T13:00:00Z",
+      "content": "From the get-go, you know I Expect You To Die 3 is a special game. That's not because it does anything revolutionary or particularly different from its two predecessors — much of the series' formula … [+5908 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Guardian"
+      },
+      "author": "Dan Milmo Global technology editor",
+      "title": "UK surveillance law changes could force Apple to ‘withdraw security features’",
+      "description": "Giving government oversight could endanger encrypted products like FaceTime and iMessage, Apple saysApple has warned that planned changes to UK surveillance laws could affect iPhone users’ privacy by forcing it to withdraw security features, which could ultim…",
+      "url": "https://www.theguardian.com/technology/2023/jul/20/uk-surveillance-law-changes-could-force-apple-to-withdraw-security-features",
+      "urlToImage": "https://i.guim.co.uk/img/media/65b3f8e6725bb1b722eef1a14678d35d159e29df/0_86_6000_3600/master/6000.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=deebd6d04caee618a0ead2937d88fa38",
+      "publishedAt": "2023-07-20T14:50:29Z",
+      "content": "Apple has warned that planned changes to UK surveillance laws could affect iPhone users privacy by forcing it to withdraw security features, which could ultimately lead to the closure of services lik… [+9674 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Guardian"
+      },
+      "author": "Hibaq Farah UK technology reporter",
+      "title": "Google testing AI tool that writes news articles",
+      "description": "Tool is said to have been pitched to several US news outlets as an aid for journalists rather than a replacementGoogle is testing an artificial intelligence tool that can write news articles, in the latest evidence that the technology has the potential to tra…",
+      "url": "https://www.theguardian.com/technology/2023/jul/20/google-testing-ai-tool-that-writes-news-articles",
+      "urlToImage": "https://i.guim.co.uk/img/media/c582662a4cab5dc3b3958769e77be7f3f15c008f/0_0_5289_3173/master/5289.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=bbd1ca6b7073acd29ec83cd13c79285f",
+      "publishedAt": "2023-07-20T12:04:29Z",
+      "content": "Google is testing an artificial intelligence tool that can write news articles, in the latest evidence that the technology has the potential to transform white-collar professions.\r\nThe product, known… [+8575 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Guardian"
+      },
+      "author": "Peter Bradshaw",
+      "title": "The Beanie Bubble review – plushie-craze toy story goes down the cute route",
+      "description": "The true story behind the once popular children’s playthings is taken on here by a decent cast who can’t stop proceedings unravellingSome deeply muddled non-storytelling and tonal blandness pretty much sink this movie from the outset, despite its decent cast …",
+      "url": "https://www.theguardian.com/film/2023/jul/20/the-beanie-bubble-review-plushie-craze-toy-story-goes-down-the-cute-route",
+      "urlToImage": "https://i.guim.co.uk/img/media/588e029a90798502d0cee103c969af53dbf868c5/0_11_2607_1564/master/2607.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctcmV2aWV3LTIucG5n&enable=upscale&s=9b27a5048e962e06cd7bdadfdafead89",
+      "publishedAt": "2023-07-20T16:00:18Z",
+      "content": "Some deeply muddled non-storytelling and tonal blandness pretty much sink this movie from the outset, despite its decent cast and origins in a potentially fascinating true story. It might have been s… [+2445 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Guardian"
+      },
+      "author": "Moya Lothian-McLean",
+      "title": "People are fascinated by the sober and sober-ish. But the real question is – why aren’t there more of us? | Moya Lothian-McLean",
+      "description": "Yes, alcohol consumption is declining. But Britain’s drinking culture still traps so many – and they can’t find a way outRecently, a friend in Scotland has been griping that licensing laws are standing in the way of his summer nights out. But not in the way y…",
+      "url": "https://www.theguardian.com/commentisfree/2023/jul/20/sober-alcohol-consumption-britain-drinking-culture",
+      "urlToImage": "https://i.guim.co.uk/img/media/2184638c37ac16c9292707e20d2d746d7ef13351/0_16_4246_2547/master/4246.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctb3BpbmlvbnMucG5n&enable=upscale&s=bbd6b3bf8b09c2f76d06d985a1d63e6a",
+      "publishedAt": "2023-07-20T09:29:02Z",
+      "content": "Recently, a friend in Scotland has been griping that licensing laws are standing in the way of his summer nights out. But not in the way you might think: his grievance centres on the impossibility of… [+5465 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Guardian"
+      },
+      "author": "Alexi Duggins, Hollie Richardson, Hannah Verdier and Ella Braidwood",
+      "title": "How a ‘hunk of plastic’ named Barbie conquered the world",
+      "description": "With the release of the much-hyped movie, hear how a doll became an icon in LA Made: The Barbie Tapes. Plus: five of the best Women’s World Cup podcasts<ul><li>Don’t get Hear Here delivered to your inbox? Sign up here</li></ul>Are you a cat person or a dog pe…",
+      "url": "https://www.theguardian.com/tv-and-radio/2023/jul/20/hear-here-barbie-podcast-la-made",
+      "urlToImage": "https://i.guim.co.uk/img/media/890c71e803d93a7f11f34ba00414d4ffe3c2e4bf/0_129_3500_2101/master/3500.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=35d9faf578c221f89258a05028106ec4",
+      "publishedAt": "2023-07-20T08:45:24Z",
+      "content": "Picks of the week\r\nLA Made: The Barbie TapesWidely available, episodes weeklyEven as a child I found her disturbing yet fascinating, says Antonia Cereijido of the Los Angeles news and culture site LA… [+11557 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "MacRumors"
+      },
+      "author": "Juli Clover",
+      "title": "Apple Supplier TSMC Delays Production of 4nm Chips at Arizona Factory Due to Skilled Worker Shortage",
+      "description": "Apple supplier TSMC has been working on building a chip manufacturing plant in Arizona where it plans to manufacture chips for Apple, but mass production is set to be delayed because of a worker shortage.\n\n\n\n\n\nAccording to The Wall Street Journal, TSMC is fin…",
+      "url": "https://www.macrumors.com/2023/07/20/tsmc-4nm-chip-production-delay/",
+      "urlToImage": "https://images.macrumors.com/t/KHLC637knfQaiuZQLoqk16XEjSw=/1810x/article-new/2021/03/m1-4nm-feature2.jpg",
+      "publishedAt": "2023-07-20T21:33:10Z",
+      "content": "Apple supplier TSMC has been working on building a chip manufacturing plant in Arizona where it plans to manufacture chips for Apple, but mass production is set to be delayed because of a worker shor… [+1114 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "MacRumors"
+      },
+      "author": "Joe Rossignol",
+      "title": "iPhone 15 Pro Expected to Feature Wi-Fi 6E: Here's What That Means",
+      "description": "Apple plans to add Wi-Fi 6E support to some of its latest iPhones, according to a research note today from Barclays analysts Blayne Curtis and Tom O'Malley. Wi-Fi 6E is rumored to be limited to the iPhone 15 Pro and iPhone 15 Pro Max, as the standard iPhone 1…",
+      "url": "https://www.macrumors.com/2023/07/20/iphone-15-pro-wifi-6e/",
+      "urlToImage": "https://images.macrumors.com/t/VXoW3Y-__lbD9u2WsGEhbu_Q-lQ=/2500x/article-new/2023/07/iPhone-15-Pro-Two-Volume-Buttons-and-Titanium-Feature-Blue-Green.jpg",
+      "publishedAt": "2023-07-20T13:25:00Z",
+      "content": "Apple plans to add Wi-Fi 6E support to some of its latest iPhones, according to a research note today from Barclays analysts Blayne Curtis and Tom O'Malley. Wi-Fi 6E is rumored to be limited to the i… [+1186 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNET"
+      },
+      "author": "Stephen Shankland",
+      "title": "1Password Tests Passkey Login to Unlock Your Password Vault - CNET",
+      "description": "Passkeys are easier to use and more secure than passwords, tech's biggest companies say. They're trying to nudge us into the \"passwordless\" login era.",
+      "url": "https://www.cnet.com/tech/services-and-software/1password-tests-passkey-login-to-unlock-your-password-vault/",
+      "urlToImage": "https://www.cnet.com/a/img/resize/3cadc1c9096057db1b3ca72ed78fd338937ea07f/hub/2023/07/19/1fa331bb-58c5-4d63-9226-c714417bf057/passkey-1password-unlock.jpg?auto=webp&fit=crop&height=675&width=1200",
+      "publishedAt": "2023-07-20T13:40:00Z",
+      "content": "1Password has begun testing a way to access the app without its namesake password, adding an option to use newer passkey technology instead. The change, which uses a quick biometric check to unlock a… [+5824 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNET"
+      },
+      "author": "Meara Isenberg",
+      "title": "YouTube Premium Now Costs More for New and Existing Subscribers - CNET",
+      "description": "You'll also have to pay more for YouTube Music Premium.",
+      "url": "https://www.cnet.com/tech/services-and-software/youtube-premium-now-costs-more-for-new-and-existing-subscribers/",
+      "urlToImage": "https://www.cnet.com/a/img/resize/a6876063af02ceced90828d246e3b6c4cff747a2/hub/2022/03/01/5d701c3b-80a3-43e9-907f-5b25e4899205/youtube-logo-6590.jpg?auto=webp&fit=crop&height=675&width=1200",
+      "publishedAt": "2023-07-20T17:43:00Z",
+      "content": "Everywhere you look, streaming services are increasingprices. The latest ones to get a price hike: YouTube Premium and YouTube Music Premium. \r\nYouTube on Thursday said it is updating the price for t… [+1041 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "MacRumors"
+      },
+      "author": "Juli Clover",
+      "title": "iPhone 15 Pro and Pro Max Supplies Could Be Constrained at Launch Due to Display Manufacturing Issues",
+      "description": "Apple is running into difficulties with iPhone 15 Pro and ‌iPhone 15 Pro‌ Max display manufacturing, which could lead to a limited number of devices being available at launch in September.\n\n\n\n\n\nRumors have suggested that the ‌iPhone 15 Pro‌ and ‌iPhone 15 Pro…",
+      "url": "https://www.macrumors.com/2023/07/20/iphone-15-pro-display-manufacturing-issues/",
+      "urlToImage": "https://images.macrumors.com/t/VXoW3Y-__lbD9u2WsGEhbu_Q-lQ=/2500x/article-new/2023/07/iPhone-15-Pro-Two-Volume-Buttons-and-Titanium-Feature-Blue-Green.jpg",
+      "publishedAt": "2023-07-20T16:42:23Z",
+      "content": "Apple is running into difficulties with iPhone 15 Pro and ‌iPhone 15 Pro‌ Max display manufacturing, which could lead to a limited number of devices being available at launch in September.\r\nRumors ha… [+2108 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "MacRumors"
+      },
+      "author": "Hartley Charlton",
+      "title": "Apple Threatens to Pull FaceTime and iMessage in the UK Over Proposed Security Legislation",
+      "description": "Apple today said that it will remove services including FaceTime and iMessage from the UK if plans to enact new legislation that would weaken security come into force (via BBC News).\n\n\n\n\n\nThe UK government is planning to update the Investigatory Powers Act (I…",
+      "url": "https://www.macrumors.com/2023/07/20/apple-threatens-to-pull-facetime-and-imessage-uk/",
+      "urlToImage": "https://images.macrumors.com/t/n72gXAq-55QcsXTWEyHi3Zy3FoE=/1600x/article-new/2022/09/apple-regent-street-hires.jpeg",
+      "publishedAt": "2023-07-20T12:10:02Z",
+      "content": "Apple says it will pull services including FaceTime and iMessage in the UK if plans to amend surveillance legislation that would require tech companies to make major security and privacy changes go a… [+2504 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "MacRumors"
+      },
+      "author": "Joe Rossignol",
+      "title": "iPhone SE Remains Safe Buy as New Model No Longer Expected to Launch Next Year",
+      "description": "After speaking with supply chain companies in Asia, Barclays analysts Blayne Curtis and Tom O'Malley believe that Apple is no longer planning to launch a fourth-generation iPhone SE in 2024. In a research note today, the analysts said the device was expected …",
+      "url": "https://www.macrumors.com/2023/07/20/iphone-se-4-no-longer-expected-in-2024/",
+      "urlToImage": "https://images.macrumors.com/t/OoSa3F8nZB6xu08a8tGb-PkN124=/2500x/article-new/2023/02/iphone-se-4-modified-flag-edges.jpg",
+      "publishedAt": "2023-07-20T14:03:28Z",
+      "content": "After speaking with supply chain companies in Asia, Barclays analysts Blayne Curtis and Tom O'Malley believe that Apple is no longer planning to launch a fourth-generation iPhone SE in 2024. In a res… [+1250 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "MacRumors"
+      },
+      "author": "Mitchel Broussard",
+      "title": "Deals: Apple's M1 MacBook Air Returns to Best-Ever Price of $749.99 on Amazon",
+      "description": "Last week during Prime Day, Amazon introduced a new all-time low price on the 2020 13.3-inch M1 MacBook Air. This deal has been unavailable since the event ended, but today Amazon brought back the record low price of $749.99 for the 256GB M1 MacBook Air, down…",
+      "url": "https://www.macrumors.com/2023/07/20/deals-m1-macbook-air-returns/",
+      "urlToImage": "https://images.macrumors.com/t/23_QgBRjo2LOrtG5I1OQJl_48jA=/2125x/article-new/2022/06/M1-MacBook-Air-Deals-Feature-Cool.jpg",
+      "publishedAt": "2023-07-20T13:41:23Z",
+      "content": "Last week during Prime Day, Amazon introduced a new all-time low price on the 2020 13.3-inch M1 MacBook Air. This deal has been unavailable since the event ended, but today Amazon brought back the re… [+982 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Slashdot.org"
+      },
+      "author": "msmash",
+      "title": "Apple Slams UK Surveillance-bill Proposals, Threatens To Remove FaceTime and iMessage",
+      "description": "Apple says it will remove services such as FaceTime and iMessage from the UK rather than weaken security if new proposals are made law and acted upon. From a report: The government is seeking to update the Investigatory Powers Act (IPA) 2016. It wants messagi…",
+      "url": "https://apple.slashdot.org/story/23/07/20/137251/apple-slams-uk-surveillance-bill-proposals-threatens-to-remove-facetime-and-imessage",
+      "urlToImage": "https://a.fsdn.com/sd/topics/encryption_64.png",
+      "publishedAt": "2023-07-20T16:00:00Z",
+      "content": "The government is seeking to update the Investigatory Powers Act (IPA) 2016. It wants messaging services to clear security features with the Home Office before releasing them to customers. The act le… [+572 chars]"
+    },
+    {
+      "source": {
+        "id": "business-insider",
+        "name": "Business Insider"
+      },
+      "author": "Sirena Bergman",
+      "title": "If you're getting mocked for loving Apple Maps, here's your reminder that people once thought the iPhone was stupid too",
+      "description": "People have just discovered that Apple Maps is now actually quite good, but they can't let go of what a disaster they were back in 2012.",
+      "url": "https://www.businessinsider.com/apple-maps-vs-google-maps-viral-debate-2023-7",
+      "urlToImage": "https://i.insider.com/64b918568a4e660019e3f79b?width=1200&format=jpeg",
+      "publishedAt": "2023-07-20T11:44:19Z",
+      "content": "A lot of the takes about the original iPhone have aged very, very badly.David Paul Morris/Getty Images\r\n<ul>\n<li>People have just discovered that Apple Maps has a loyal fanbase, and is actually quite… [+2386 chars]"
+    },
+    {
+      "source": {
+        "id": "business-insider",
+        "name": "Business Insider"
+      },
+      "author": "George Glover",
+      "title": "Tesla is the next Apple and its valuation could soar by another $190 billion, Wedbush says",
+      "description": "Shares in Elon Musk's EV maker could hit $350, analyst Dan Ives wrote in a new research note following its second-quarter results.",
+      "url": "https://www.businessinsider.com/tesla-stock-elon-musk-apple-ai-full-self-driving-wedbush-2023-7",
+      "urlToImage": "https://i.insider.com/64b917daa46ce30019a274a5?width=1200&format=jpeg",
+      "publishedAt": "2023-07-20T12:46:05Z",
+      "content": "Tesla CEO Elon Musk at an event in Shanghai.Aly Song/Reuters\r\n<ul>\n<li>Tesla's stock could jump another 20%, Wedbush said in a note on Thursday.</li>\n<li>Analyst Dan Ives compared it to Apple in the … [+2177 chars]"
+    },
+    {
+      "source": {
+        "id": "business-insider",
+        "name": "Business Insider"
+      },
+      "author": "George Glover",
+      "title": "Tesla is the next Apple and its valuation could soar by another $190 billion, Wedbush says",
+      "description": "Shares in Elon Musk's EV maker could hit $350, analyst Dan Ives wrote in a new research note following its second-quarter results.",
+      "url": "https://markets.businessinsider.com/news/stocks/tesla-stock-elon-musk-apple-ai-full-self-driving-wedbush-2023-7",
+      "urlToImage": "https://i.insider.com/64b917daa46ce30019a274a5?width=1200&format=jpeg",
+      "publishedAt": "2023-07-20T13:22:43Z",
+      "content": "Tesla CEO Elon Musk at an event in Shanghai.Aly Song/Reuters\r\n<ul>\n<li>Tesla's stock could jump another 20%, Wedbush said in a note on Thursday.</li>\n<li>Analyst Dan Ives compared it to Apple in the … [+2177 chars]"
+    },
+    {
+      "source": {
+        "id": "business-insider",
+        "name": "Business Insider"
+      },
+      "author": "Kelsey Vlamis",
+      "title": "When an airline made his bag disappear, a magician bought another plane ticket to get back in the airport and track it down with an Apple AirTag",
+      "description": "Magician Danny Orleans took matters into his own hands when the airline said his bag never made it to Newark, but he could see it on the AirTag app.",
+      "url": "https://www.businessinsider.com/newark-lost-bag-magician-bought-new-ticket-found-apple-airtag-2023-7",
+      "urlToImage": "https://i.insider.com/64b89c188a4e660019e3c55a?width=1200&format=jpeg",
+      "publishedAt": "2023-07-20T19:52:43Z",
+      "content": "Danny Orleans used his Apple AirTag to track down his bag on the tarmac.Danny Orleans\r\n<ul>\n<li>Magician Danny Orleans's bag was missing when he landed in Newark the day before a performance.</li>\n<l… [+4432 chars]"
+    },
+    {
+      "source": {
+        "id": "business-insider",
+        "name": "Business Insider"
+      },
+      "author": "George Glover",
+      "title": "Netflix is trumpeting its password crackdown – but tougher times lie ahead for the streaming pioneer",
+      "description": "Netflix added 6 million subscribers in the second quarter, but its revenue still fell short of analysts' projections.",
+      "url": "https://www.businessinsider.com/netflix-stock-password-sharing-crackdown-earnings-subscribers-hollywood-strike-markets-2023-7",
+      "urlToImage": "https://i.insider.com/64b8fb878a4e660019e3dd67?width=1200&format=jpeg",
+      "publishedAt": "2023-07-20T11:10:10Z",
+      "content": "Writers picket outside Netflix on Sunset Boulevard in Hollywood.Frederic Brown/Getty Images\r\n<ul>\n<li>Netflix's password-sharing crackdown helped it add 6 million subscribers in the second quarter.</… [+1944 chars]"
+    },
+    {
+      "source": {
+        "id": "business-insider",
+        "name": "Business Insider"
+      },
+      "author": "Joseph Wilkins",
+      "title": "This 'gamechanger' technology is harder than rocket science and will drive the next AI wave, Goldman Sachs says",
+      "description": "Technological advancements in chipmaking will fuel the next wave of AI and bring the value of the semiconductor industry to over $1 trillion, per Goldman Sachs Research.",
+      "url": "https://markets.businessinsider.com/news/stocks/chatgpt-ai-artificial-intelligence-next-wave-euv-semiconductors-goldman-sachs-2023-7",
+      "urlToImage": "https://i.insider.com/64b90a5c8a4e660019e3ebdf?width=1200&format=jpeg",
+      "publishedAt": "2023-07-20T12:40:32Z",
+      "content": "A semiconductor being manufacturedGetty\r\n<ul>\n<li>An advanced chipmaking technology known as EUV \"will enable the next wave of AI\", according to Goldman Sachs.</li>\n<li>Goldman analyst Alexander Duva… [+2857 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "ReadWrite"
+      },
+      "author": "Brad Anderson",
+      "title": "Apple’s ChatGPT Rival Is Coming Soon",
+      "description": "In a recent report from Bloomberg’s Mark Gurman, it has been revealed that Apple is making significant strides in the […]\nThe post Apple’s ChatGPT Rival Is Coming Soon appeared first on ReadWrite.",
+      "url": "https://readwrite.com/apples-chatgpt-rival-is-coming-soon/",
+      "urlToImage": "https://images.readwrite.com/wp-content/uploads/2023/07/keming-tan-5VWF_nL7JzQ-unsplash-scaled.jpg",
+      "publishedAt": "2023-07-20T00:16:31Z",
+      "content": "In a recent report from Bloomberg’s Mark Gurman, it has been revealed that Apple is making significant strides in the development of artificial intelligence (AI) tools to compete with industry leader… [+8184 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Boing Boing"
+      },
+      "author": "Boing Boing's Shop",
+      "title": "Looking for an Apple iPad at a price that you can afford? We've got you!",
+      "description": "We thank our sponsor for making this content possible; it is not written by the editorial staff nor does it necessarily reflect its views.\n\n\n\nTL;DR: Enjoy the portability and user-friendly ease of the Apple iPad Pro 9.7\" A1673 32GB WiFi Silver Bundle (Refurbi…",
+      "url": "https://boingboing.net/2023/07/20/looking-for-an-apple-ipad-at-a-price-that-you-can-afford-weve-got-you.html",
+      "urlToImage": "https://i0.wp.com/boingboing.net/wp-content/uploads/2023/07/image_processing20230320-72-8zepr4.jpg?fit=1200%2C800&ssl=1",
+      "publishedAt": "2023-07-20T15:00:00Z",
+      "content": "We thank our sponsor for making this content possible; it is not written by the editorial staff nor does it necessarily reflect its views.\r\nTL;DR: Enjoy the portability and user-friendly ease of the … [+1623 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Boing Boing"
+      },
+      "author": "Boing Boing's Shop",
+      "title": "Get access to more than 240 Mac apps to boost your creativity and productivity for only $85",
+      "description": "We thank our sponsor for making this content possible; it is not written by the editorial staff nor does it necessarily reflect its views.TL;DR: Spend less time filtering through hundreds of apps and let them come to you with a 1-Year Subscription to Setapp P…",
+      "url": "https://boingboing.net/2023/07/20/get-access-to-more-than-240-mac-apps-to-boost-your-creativity-and-productivity-for-only-85.html",
+      "urlToImage": "https://i0.wp.com/boingboing.net/wp-content/uploads/2023/07/sale_322607_article_image.jpg?fit=1200%2C800&ssl=1",
+      "publishedAt": "2023-07-20T21:00:00Z",
+      "content": "We thank our sponsor for making this content possible; it is not written by the editorial staff nor does it necessarily reflect its views.TL;DR: Spend less time filtering through hundreds of apps and… [+2000 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Hackaday"
+      },
+      "author": "Arya Voronova",
+      "title": "PCIe For Hackers: An M.2 Card Journey",
+      "description": "I’ve designed a few M.2 adapters for my own and my friends’ use, and having found those designs online, people have asked me for custom-made adapters. One of these requests is quite spe…",
+      "url": "https://hackaday.com/2023/07/20/pcie-for-hackers-an-m-2-card-journey/",
+      "urlToImage": "https://hackaday.com/wp-content/uploads/2023/03/PCIe.jpg",
+      "publishedAt": "2023-07-20T14:00:32Z",
+      "content": "I’ve designed a few M.2 adapters for my own and my friends’ use, and having found those designs online, people have asked me for custom-made adapters. One of these requests is quite specific – an ada… [+14067 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Hackaday"
+      },
+      "author": "Al Williams",
+      "title": "TV Typewriter Remembered",
+      "description": "With the recent passing of Don Lancaster, I took a minute to reflect on how far things have come in a pretty short period of time. If you somehow acquired a computer in the early 1970s, it was prob…",
+      "url": "https://hackaday.com/2023/07/20/tv-typewriter-remembered/",
+      "urlToImage": "https://hackaday.com/wp-content/uploads/2023/07/tv_typewriter.jpg",
+      "publishedAt": "2023-07-20T17:00:18Z",
+      "content": "With the recent passing of Don Lancaster, I took a minute to reflect on how far things have come in a pretty short period of time. If you somehow acquired a computer in the early 1970s, it was probab… [+5876 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Boing Boing"
+      },
+      "author": "Mark Frauenfelder",
+      "title": "Apple says it will pull Messages and FaceTime if UK forces back-door access to its encryption",
+      "description": "The UK government is eager to pass the Online Safety Bill, which would require messaging services to provide backdoors into end-to-end encrypted messages, reports 9to5Mac. It's the same tired excuse: a government claiming the necessity of detecting illegal co…",
+      "url": "https://boingboing.net/2023/07/20/apple-says-it-will-pull-messages-and-facetime-if-uk-forces-back-door-access-to-its-encryption.html",
+      "urlToImage": "https://i0.wp.com/boingboing.net/wp-content/uploads/2022/05/applehq.jpeg?fit=1200%2C900&ssl=1",
+      "publishedAt": "2023-07-20T18:51:31Z",
+      "content": "The UK government is eager to pass the Online Safety Bill, which would require messaging services to provide backdoors into end-to-end encrypted messages, reports 9to5Mac. It's the same tired excuse:… [+2118 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Xataka.com"
+      },
+      "author": "Rubén Andrés",
+      "title": "En 1990 Steve Jobs soñaba con el teletrabajo. Tim Cook y la Apple de 2023 no opinan lo mismo",
+      "description": "Steve Jobs ha sido una figura relevante en la industria de la informática, pero también fue un visionario en la gestión empresarial. Hace 43 años, Steve Jobs ya soñaba con entornos de trabajo remoto, un modelo que la Apple de Tim Cook ha vetado a sus trabajad…",
+      "url": "https://www.xataka.com/empresas-y-economia/1990-steve-jobs-sonaba-teletrabajo-tim-cook-apple-2023-no-opinan",
+      "urlToImage": "https://i.blogs.es/ea3e83/jobs-y-cook/840_560.jpeg",
+      "publishedAt": "2023-07-20T13:01:49Z",
+      "content": "Steve Jobs ha sido una figura relevante en la industria de la informática, pero también fue un visionario en la gestión empresarial. Hace 43 años, Steve Jobs ya soñaba con entornos de trabajo remoto,… [+3020 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Xataka.com"
+      },
+      "author": "Javier Marquez",
+      "title": "HP ya sabe cómo empezar a reducir su dependencia de China: llevando parte de su producción a México y Tailandia",
+      "description": "El mundo ha cambiado sustancialmente en los últimos años, al menos para las compañías tecnológicas que, además de ofrecer productos digitales, comercializan dispositivos electrónicos. Los numerosos problemas de suministro causados por la pandemia junto a la g…",
+      "url": "https://www.xataka.com/empresas-y-economia/hp-sabe-como-empezar-a-reducir-su-dependencia-china-llevando-parte-su-produccion-a-mexico-tailandia",
+      "urlToImage": "https://i.blogs.es/22ea48/hp-portatil/840_560.jpeg",
+      "publishedAt": "2023-07-20T20:00:00Z",
+      "content": "El mundo ha cambiado sustancialmente en los últimos años, al menos para las compañías tecnológicas que, además de ofrecer productos digitales, comercializan dispositivos electrónicos. Los numerosos p… [+3020 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Xataka.com"
+      },
+      "author": "John Tones",
+      "title": "Una de las secuelas más merecidas, inesperadas y brutales de los últimos años está arrasando en Netflix",
+      "description": "A mediados de la década pasada, 'No respires' se convirtió en uno de los éxitos sorpresa del género de terror, y colocó a su director Fede Álvarez, después de su estupendo remake de 'Evil Dead', en uno de los nombres propios más relevantes del género de terro…",
+      "url": "https://www.xataka.com/streaming/secuelas-merecidas-inesperadas-brutales-ultimos-anos-esta-arrasando-netflix",
+      "urlToImage": "https://i.blogs.es/600a99/1366_2000-11-/840_560.jpeg",
+      "publishedAt": "2023-07-20T18:01:51Z",
+      "content": "A mediados de la década pasada, 'No respires' se convirtió en uno de los éxitos sorpresa del género de terror, y colocó a su director Fede Álvarez, después de su estupendo remake de 'Evil Dead', en u… [+1714 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Xataka.com"
+      },
+      "author": "Albert Sanchis",
+      "title": "Las plataformas de streaming más populares en cada país del mundo, en un detallado mapa",
+      "description": "En los últimos años, el streaming se ha convertido en una columna esencial del mundo del entretenimiento. Podríamos decir que las plataformas de vídeo se han convertido en la nueva \"tele\". De hecho, que Sálvame vaya a emitirse en Netflix en España es una clar…",
+      "url": "https://www.xataka.com/streaming/plataformas-streaming-populares-cada-pais-mundo-detallado-mapa",
+      "urlToImage": "https://i.blogs.es/103858/asfdaf/840_560.png",
+      "publishedAt": "2023-07-20T08:25:49Z",
+      "content": "En los últimos años, el streaming se ha convertido en una columna esencial del mundo del entretenimiento. Podríamos decir que las plataformas de vídeo se han convertido en la nueva \"tele\". De hecho, … [+4432 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Economist"
+      },
+      "author": "The Economist",
+      "title": "Big tech’s dominance is straining the logic of passive investing",
+      "description": "Both index providers and fund managers must adjust to the dominance of a few firms",
+      "url": "https://www.economist.com/finance-and-economics/2023/07/20/big-techs-dominance-is-straining-the-logic-of-passive-investing",
+      "urlToImage": "https://www.economist.com/img/b/1280/720/90/media-assets/image/20230722_FNP504.jpg",
+      "publishedAt": "2023-07-20T09:32:39Z",
+      "content": "Dont look for the needle in the haystack. Just buy the haystack! So wrote Jack Bogle, who founded Vanguard Asset Management in 1975 and brought index investment to a mass market. Subsequent decades p… [+4297 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Digital Trends"
+      },
+      "author": "Alex Blake",
+      "title": "Apple’s next Vision Pro may send you on a mood-altering trip",
+      "description": "A freshly granted patent shows Apple is working on letting its Vision Pro headset alter your mood at the touch of a button. Could we see it in the near future?",
+      "url": "http://www.digitaltrends.com/computing/apple-vision-pro-mood-altering-patent/",
+      "urlToImage": "https://www.digitaltrends.com/wp-content/uploads/2023/06/apple-vision-pro-wwdc-2023-20.png?resize=1200%2C630&p=1",
+      "publishedAt": "2023-07-20T11:15:32Z",
+      "content": "It sounds like something out of a sci-fi novel, but Apple could be working on a way to let you alter your mood just by telling its Vision Pro headset how you want to feel. That’s according to a recen… [+2696 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Digital Trends"
+      },
+      "author": "Mark Coppock",
+      "title": "I’m a laptop reviewer, and this is the one to send your kid to college with",
+      "description": "The Asus ZenBook 14 OLED offers tremendous value, as well as the performance, battery life, and display quality that college students will love.",
+      "url": "http://www.digitaltrends.com/computing/laptop-reviewer-best-laptop-for-college/",
+      "urlToImage": "https://www.digitaltrends.com/wp-content/uploads/2023/06/asus-zenbook-14-oled-featured-e1686694508979.jpg?resize=1200%2C630&p=1",
+      "publishedAt": "2023-07-20T14:00:24Z",
+      "content": "I’ve reviewed many of the major laptops released over the past few years, and one of the most common questions I get is about which laptop to buy for a kid going off to college.\r\nYou need something p… [+4356 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Digital Trends"
+      },
+      "author": "Phil Nickinson",
+      "title": "YouTube Premium and Google Music are now more expensive, too",
+      "description": "Get ready to pay a little more for an individual subscription to YouTube Premium or YouTube Music.",
+      "url": "http://www.digitaltrends.com/home-theater/youtube-premium-price-increase/",
+      "urlToImage": "https://www.digitaltrends.com/wp-content/uploads/2022/10/youtube-premium-oct-22-1.jpg?resize=1200%2C630&p=1",
+      "publishedAt": "2023-07-20T12:58:25Z",
+      "content": "Phil Nickinson/Digital Trends\r\nGet ready to pay a little more for a couple of Google’s streaming options. As spotted by 9to5 Google, YouTube Premium — the add-on that (among other things) gets rid of… [+1547 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Digital Trends"
+      },
+      "author": "Christine Romero-Chan",
+      "title": "I made myself try a 14.5-inch tablet — and it didn’t go very well",
+      "description": "I spent the past few weeks using one of the largest tablets ever, and I've come to the conclusion that no one really needs tablets this big.",
+      "url": "http://www.digitaltrends.com/mobile/i-made-myself-use-a-big-android-tablet-didnt-go-well-why/",
+      "urlToImage": "https://www.digitaltrends.com/wp-content/uploads/2023/07/lenovo-tab-extreme-chrome.jpg?resize=1200%2C630&p=1",
+      "publishedAt": "2023-07-20T13:00:57Z",
+      "content": "Andrew Martonik/Digital Trends\r\nEveryone has a tablet these days — whether it’s an Apple iPad or an Android tablet from Samsung, Lenovo, or even OnePlus. Tablets are great devices, as they let you be… [+5147 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Atlantic"
+      },
+      "author": "Hanna Rosin",
+      "title": "Why Can’t We Quit Weddings?",
+      "description": "Marriages aren’t what they used to be. So why are weddings ever more wedding-like and deluxe?",
+      "url": "https://www.theatlantic.com/podcasts/archive/2023/07/why-cant-we-quit-weddings/674772/?utm_source=feed",
+      "urlToImage": null,
+      "publishedAt": "2023-07-20T12:30:00Z",
+      "content": "<!-----\n\nYay, no errors, warnings, or alerts!\n\nConversion time: 1.421 seconds.\n\n\nUsing this HTML file:\n\n1. Paste this output into your source file.\n2. See the notes and action items below regarding t… [+30564 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Github.com"
+      },
+      "author": "avaneev",
+      "title": "LZAV – Fast In-Memory Data Compression Algorithm (In C)",
+      "description": "Fast In-Memory Data Compression Algorithm (in C). Contribute to avaneev/lzav development by creating an account on GitHub.",
+      "url": "https://github.com/avaneev/lzav",
+      "urlToImage": "https://opengraph.githubassets.com/93601260b252939acc195d5d554b83678255c32ff21de23616bf04bd5212a3dc/avaneev/lzav",
+      "publishedAt": "2023-07-20T00:39:31Z",
+      "content": "Introduction\r\nLZAV is a fast general-purpose in-memory data compression algorithm based on\r\nnow-classic LZ77 data compression\r\napproach. LZAV holds a good position on the Pareto landscape of factors,… [+3796 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Cloudinary.com"
+      },
+      "author": "melindapham",
+      "title": "JPEG XL: How It Started, How It’s Going",
+      "description": "Significance of Apple's support for JPEG XL and what this means for the widespread adoption of this next-generation image compression format.",
+      "url": "https://cloudinary.com/blog/jpeg-xl-how-it-started-how-its-going",
+      "urlToImage": "https://res.cloudinary.com/cloudinary-marketing/images/v1688666201/Blog-jpegXL/Blog-jpegXL-jpg?_i=AA",
+      "publishedAt": "2023-07-20T14:57:21Z",
+      "content": "Last month at the annual Worldwide Developers Conference, Apple announced its support of JPEG XL. As someone who helped create JPEG XL, I dont think anyone was more pleased than me to hear this news.… [+7765 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Taylor.town"
+      },
+      "author": "Taylor Troesh",
+      "title": "Spoil Your Secret Sauce",
+      "description": "Go on an adventure. Find a New Thing™. Bring it back. Share it, and demonstrate why the New Thing™ is worth sharing.",
+      "url": "https://taylor.town/secret-sauce",
+      "urlToImage": null,
+      "publishedAt": "2023-07-20T11:52:46Z",
+      "content": "Ive always maintained, he said, you cannot tell anyone what Dr Pepper\r\ntastes like because its so different. Its not an apple; its not an orange;\r\nits not a strawberry; its not a root beer; its not e… [+7356 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "heise online"
+      },
+      "author": "Ben Schwan",
+      "title": "Apple GPT statt ChatGPT: KI-Experimente in Cupertino",
+      "description": "Ein internes Projekt soll erforschen, ob auch Apple große Sprachmodelle für seine Systeme  nutzen könnte. Erste Ansätze finden sich in iOS 17.",
+      "url": "https://www.heise.de/news/Apple-GPT-statt-ChatGPT-KI-Experimente-in-Cupertino-9221427.html",
+      "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/2/7/3/9/2/4/Apple-WWDC23-MacBook-Air-15-in-lifestyle-230605_big.jpg.large_2x-ff46ee82b3ba1d4e.jpg",
+      "publishedAt": "2023-07-20T07:41:00Z",
+      "content": "Bislang scheint Apples KI-Strategie angesichts der großen Schritte von OpenAI (ChatGPT), Microsoft (Bing Chat) oder Google (Bard) eher ungewiss. Der iPhone-Konzern neigt eher zum Mahnen statt zur pra… [+2667 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "heise online"
+      },
+      "author": "Ben Schwan",
+      "title": "Neue Standby-Funktion in iOS 17: Sieht so Apples HomePod mit Bildschirm aus?",
+      "description": "Der neue Betriebsmodus fürs iPhone ist nicht nur für den Nachttisch geeignet. StandBy in iOS 17 könnte zum Vorbild neuartiger Apple-Entertainment-Geräte werden.",
+      "url": "https://www.heise.de/news/Neue-Standby-Funktion-in-iOS-17-Sieht-so-Apples-HomePod-mit-Bildschirm-aus-9218991.html",
+      "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/2/7/2/6/3/1/standby-c965094bcf4f6870.png",
+      "publishedAt": "2023-07-20T09:52:00Z",
+      "content": "Seit Jahren wird spekuliert, dass Apple erstmals ein Smarthome-Gerät mit Bildschirm plant. Es könnte eine Mischung aus dem Lautsprecher HomePod und der Multimediabox Apple TV sein oder ein abgespeckt… [+2359 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Zac Hall",
+      "title": "A boring Apple Watch Series 9 and Ultra 2 might make style a big feature",
+      "description": "Apple Watch Series 9 and Apple Watch Ultra 2 are expected to be unveiled in less than two months, but not much is known about what will be new.\n more…\nThe post A boring Apple Watch Series 9 and Ultra 2 might make style a big feature appeared first on 9to5Mac.",
+      "url": "https://9to5mac.com/2023/07/20/apple-watch-series-9-ultra-2-whats-new/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/05/Apple-Watch-Pride-face-2023.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T19:40:56Z",
+      "content": "Apple Watch Series 9 and Apple Watch Ultra 2 are expected to be unveiled in less than two months, but not much is known about what will be new.\r\nWe expect Apple Watch Series 9 and Apple Watch Ultra 2… [+2859 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Chance Miller",
+      "title": "Apple Pay Later off to a hot start despite staggered rollout",
+      "description": "Apple Pay Later has been rolling out since March, but it’s still not available to everyone. Despite the limited availability, a new survey today suggests that Apple is already taking business from other buy-now-pay-later services like Paypal, Afterpay, and mo…",
+      "url": "https://9to5mac.com/2023/07/20/apple-pay-later-usage-data-afterpay/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/03/apple-pay-later.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T16:16:32Z",
+      "content": "Apple Pay Later has been rolling out since March, but it’s still not available to everyone. Despite the limited availability, a new survey today suggests that Apple is already taking business from ot… [+2152 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Filipe Espósito",
+      "title": "tvOS 16.6 officially adds Siri support in Hebrew for Apple TV and HomePod",
+      "description": "Earlier this year, it was reported that Apple had been internally testing Siri support in Hebrew for the HomePod with iOS 16.4 – and there was even a video of the new language in action on a HomePod mini running an internal beta build. Now with iOS 16.6 and t…",
+      "url": "https://9to5mac.com/2023/07/20/tvos-16-6-siri-hebrew-apple-tv-homepod/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/02/Siri-HomePod.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T23:33:44Z",
+      "content": "Earlier this year, it was reported that Apple had been internally testing Siri support in Hebrew for the HomePod with iOS 16.4 and there was even a video of the new language in action on a HomePod mi… [+2135 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Filipe Espósito",
+      "title": "Apple employee reportedly didn’t tell Google about zero-day exploit found in Chrome",
+      "description": "As we often report here, it’s common for tech companies to help each other improve their security systems by sharing zero-day exploits found by security researchers. Google, for example, does this a lot. But recently, an Apple employee reportedly found a zero…",
+      "url": "https://9to5mac.com/2023/07/20/apple-google-chrome-exploit/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/02/chrome-apple-revenue.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T19:46:53Z",
+      "content": "As we often report here, its common for tech companies to help each other improve their security systems by sharing zero-day exploits found by security researchers. Google, for example, does this a l… [+2031 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Benjamin Mayo",
+      "title": "Apple says it would remove iMessage and FaceTime in the UK rather than break end-to-end encryption",
+      "description": "Facing possible legislation that would require messaging services to offer backdoors in end-to-end encryption, Apple is saying it would rather remove apps like iMessage and FaceTime entirely from the UK market (via BBC News).\nThe new Online Safety Bill is cur…",
+      "url": "https://9to5mac.com/2023/07/20/apple-imessage-facetime-remove-security-law/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2022/06/iMessage-edit-victim.png?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T12:41:22Z",
+      "content": "Facing possible legislation that would require messaging services to offer backdoors in end-to-end encryption, Apple is saying it would rather remove apps like iMessage and FaceTime entirely from the… [+1376 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Ben Lovejoy",
+      "title": "Apple GPT won’t be a customer feature anytime soon [Opinion]",
+      "description": "News that Apple has developed its own generative AI model – dubbed Apple GPT – caused a little flurry of excitement yesterday, with John Gruber noting that it caused AAPL’s stock price to briefly spike by 2.7%\nEven investors seemed to quickly realise that the…",
+      "url": "https://9to5mac.com/2023/07/20/apple-gpt-future/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/07/Apple-GPT-wont-be-a-customer-tool-anytime-soon.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T13:50:10Z",
+      "content": "News that Apple has developed its own generative AI model dubbed Apple GPT caused a little flurry of excitement yesterday, with John Gruber noting that it caused AAPL’s stock price to briefly spike b… [+4809 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Chance Miller",
+      "title": "iPhone 15 Pro could face ‘severe shortages’ at launch due to display production issues",
+      "description": "Apple is reportedly facing production issues for the iPhone 15 Pro and iPhone 15 Pro Max. A new report today says that these devices could face severe supply constraints in September due to Apple’s plans to significantly reduce the size of the bezel around th…",
+      "url": "https://9to5mac.com/2023/07/20/iphone-15-pro-delays-shortages-display/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/02/iphone-15-pro-hero-1.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T16:37:54Z",
+      "content": "Apple is reportedly facing production issues for the iPhone 15 Pro and iPhone 15 Pro Max. A new report today says that these devices could face severe supply constraints in September due to Apple’s p… [+2671 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Seth Kurkowski",
+      "title": "9to5Mac Daily: July 20, 2023 – iPhone 15 delays, Apple threatens to leave the UK",
+      "description": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apple’s Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overcast and other podcast players.\nEnjoy the podcast? Shop \n\r\n\n …",
+      "url": "https://9to5mac.com/2023/07/20/daily-july-20-2023/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T22:23:29Z",
+      "content": "Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apples Podcasts app, Stitcher, TuneIn, Google Play, or through our dedicated RSS feed for Overca… [+842 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Filipe Espósito",
+      "title": "Beats Studio Pro teases USB-C and Lossless coming to next-generation AirPods Max",
+      "description": "Apple on Wednesday unveiled the new Beats Studio Pro, which is the first major overhaul of the Beats Studio since 2017. And while Beats’ products have been co-existing with AirPods, Beats Studio Pro competes directly with AirPods Max – Apple’s super expensive…",
+      "url": "https://9to5mac.com/2023/07/19/beats-studio-pro-usb-c-lossless-airpods-max/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/07/Beats-Studio-Pro.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T01:14:31Z",
+      "content": "Apple on Wednesday unveiled the new Beats Studio Pro, which is the first major overhaul of the Beats Studio since 2017. And while Beats’ products have been co-existing with AirPods, Beats Studio Pro … [+2950 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Chance Miller",
+      "title": "Review: Beats Studio Pro are here, and they make AirPods Max impossible to recommend (for now)",
+      "description": "Update July 20, 2023: are also now available on Amazon with next-day shipping. \nThe oft-rumored headphones are now official. While Apple’s Beats brand has released a wide and very impressive range of earbuds over the last several years, the new Beats Studio P…",
+      "url": "https://9to5mac.com/2023/07/20/beats-studio-pro-headphones-review/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/07/beats-studio-pro8.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T15:05:41Z",
+      "content": "Update July 20, 2023: Beats Studio Pro are also now available on Amazon with next-day shipping. \r\nThe oft-rumored Beats Studio Pro headphones are now official. While Apples Beats brand has released a… [+15640 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Michael Potuck",
+      "title": "PSA: mophie working on firmware fix for 3-in-1 travel charger with MagSafe issue",
+      "description": "At the start of 2022, mophie launched a compact portable charger for Apple Watch, AirPods, and iPhone with official MagSafe. But this summer, a charging issue has surfaced that’s made the device unusable for some. While there is a firmware fix coming soon, yo…",
+      "url": "https://9to5mac.com/2023/07/20/mophie-firmware-fix-for-3-in-1-travel-charger/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2022/02/iphone-airpods-travel-charger-mophie-3-in-1-review.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T20:54:22Z",
+      "content": "At the start of 2022, mophie launched a compact portable charger for Apple Watch, AirPods, and iPhone with official MagSafe. But this summer, a charging issue has surfaced that’s made the device unus… [+2165 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Ben Lovejoy",
+      "title": "TSMC Arizona chip production delayed from 2024 to 2025",
+      "description": "The start of TSMC Arizona chip production – which will include chips for older Apple devices – has now been officially delayed by the company. Production was scheduled to begin in late 2024, and this has now been pushed back to early 2025.\nApple’s chipmaker h…",
+      "url": "https://9to5mac.com/2023/07/20/tsmc-arizona-chip-production-delayed/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/07/TSMC-Arizona-chip-production-delayed.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T12:01:21Z",
+      "content": "The start of TSMC Arizona chip production which will include chips for older Apple devices has now been officially delayed by the company. Production was scheduled to begin in late 2024, and this has… [+2476 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Chance Miller",
+      "title": "Car owners are frustrated with infotainment confusion, so GM is taking away the most popular solutions",
+      "description": "In case you missed it, GM is planning to ditch CarPlay in all of its future EVs starting next year. A new survey from JD Power today only further highlights the stupidity of GM’s decision, revealing that fewer people than ever enjoy in-car infotainment system…",
+      "url": "https://9to5mac.com/2023/07/20/survey-carplay-gm-android-auto/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/01/carplay-music-app.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T17:19:58Z",
+      "content": "In case you missed it, GM is planning to ditch CarPlay in all of its future EVs starting next year. A new survey from JD Power today only further highlights the stupidity of GMs decision, revealing t… [+4335 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Chance Miller",
+      "title": "Magician relies on AirTag and a second plane ticket after United makes his bag disappear",
+      "description": "Apple’s AirTag item tracker has once again stepped in to save the day for a United Airlines traveler. This time, magician Danny Orleans was traveling from Chicago to Newark to perform at a trade show when he realized United’s own magic trick had made his bag …",
+      "url": "https://9to5mac.com/2023/07/20/magician-airtag-united-airlines-bag/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/07/airtag-tarmac.jpeg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T20:48:23Z",
+      "content": "Apple’s AirTag item tracker has once again stepped in to save the day for a United Airlines traveler. This time, magician Danny Orleans was traveling from Chicago to Newark to perform at a trade show… [+3724 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Rikka Altland",
+      "title": "Deals: 12.9-inch M2 iPad Pro $150 off, 16-inch M1 Pro/Max MacBook Pro from $1,900 lows, more",
+      "description": "We’re back with Thursday’s batch of fresh discounts courtesy of 9to5Toys, with some 12.9-inch M2 iPad Pro discounts leading the way. With Prime Day having come and gone without a chance to save, you can now take $150 off various models. Those who don’t mind g…",
+      "url": "https://9to5mac.com/2023/07/20/deals-12-9-inch-m2-ipad-pro-16-inch-m1-promacbook-pro/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/05/final-cut-pro-for-ipad-hero.jpeg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T15:50:48Z",
+      "content": "We’re back with Thursday’s batch of fresh discounts courtesy of 9to5Toys, with some 12.9-inch M2 iPad Pro discounts leading the way. With Prime Day having come and gone without a chance to save, you … [+5080 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Filipe Espósito",
+      "title": "‘Pokémon Sleep’ game and sleep tracker now available on the App Store for iPhone",
+      "description": "The Pokémon Company announced earlier this year its new app called Pokémon Sleep, which combines a sleep monitor with a game that lets users keep an eye on their sleep cycle and turn the collected data into a fun game. Today, the app has officially launched o…",
+      "url": "https://9to5mac.com/2023/07/19/pokemon-sleep-tracker-game/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/07/Pokemon-Sleep.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T01:06:17Z",
+      "content": "The Pokémon Company announced earlier this year its new app called Pokémon Sleep, which combines a sleep monitor with a game that lets users keep an eye on their sleep cycle and turn the collected da… [+1943 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Michael Potuck",
+      "title": "Nomad launches reimagined ChargeKey with Lightning and USB-C versions [Hands-on]",
+      "description": "Back in 2013 in Nomad’s early days, the company launched an innovative charging solution for iPhone called ChargeKey. Now the “world’s most portable charging cable” has been redesigned with a modern and metal build and it comes in both Lightning and USB-C ver…",
+      "url": "https://9to5mac.com/2023/07/20/nomad-launches-reimagined-chargekey-lightning-and-usb-c/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/07/nomad-chargekey-lightning-usb-c.jpeg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T16:00:20Z",
+      "content": "Back in 2013 in Nomad’s early days, the company launched an innovative charging solution for iPhone called ChargeKey. Now the “world’s most portable charging cable” has been redesigned with a modern … [+2148 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Ben Lovejoy",
+      "title": "iPhone 15 delay predicted by analyst who was right about iPhone 12",
+      "description": "A Bank of America (BoA) analyst, who correctly predicted that the iPhone 12 would not go on sale in September 2020, is now suggesting that we might see a similar iPhone 15 delay.\nBofA Global Research analyst Wamsi Mohan said in an investment note that this ye…",
+      "url": "https://9to5mac.com/2023/07/20/iphone-15-delay/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/05/iphone-15-48mp-camera.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T11:13:42Z",
+      "content": "A Bank of America (BoA) analyst, who correctly predicted that the iPhone 12 would not go on sale in September 2020, is now suggesting that we might see a similar iPhone 15 delay.\r\nBofA Global Researc… [+2329 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "9to5Mac"
+      },
+      "author": "Michael Potuck",
+      "title": "Best USB-C and Thunderbolt displays for Mac [New: Samsung ViewFinity 5K]",
+      "description": "USB-C/Thunderbolt display options have really expanded over the last couple of years. While Apple’s Pro Display XDR isn’t the best fit for most Mac users at $5,000+, it also offers the more affordable Studio Display. But there are also lots of solid choices f…",
+      "url": "https://9to5mac.com/2023/07/20/best-4k-usb-c-displays-for-macbook-and-macbook-pro/",
+      "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2023/05/best-usb-c-thunderbolt-displays-mac-samsung.jpg.webp?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "publishedAt": "2023-07-20T21:25:00Z",
+      "content": "USB-C/Thunderbolt display options have really expanded over the last couple of years. While Apples Pro Display XDR isnt the best fit for most Mac users at $5,000+, it also offers the more affordable … [+14742 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Android Police"
+      },
+      "author": "Chandraveer Mathur",
+      "title": "Google throws its weight behind yet another messaging standard",
+      "description": "'E2EE everywhere' could be another RCS-like pie in the sky",
+      "url": "https://www.androidpolice.com/google-backs-mls-standard-e2ee-everywhere/",
+      "urlToImage": "https://static1.anpoimages.com/wordpress/wp-content/uploads/2023/04/google-chat-2023-ap-hero.jpg",
+      "publishedAt": "2023-07-20T21:54:56Z",
+      "content": "Security is critical wherever sensitive data is involved, like cloud storage, password management, and communication. The best encrypted messaging apps today don’t shy away from their responsibility … [+2821 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Guardian"
+      },
+      "author": "Graham Ruthven",
+      "title": "Lionel Messi’s biggest impact in MLS won’t be on the pitch",
+      "description": "The Argentinian’s debut for Inter Miami is approaching. But it is the terms of his contract that could change the game in North America in the long termThe symbolism of David Beckham welcoming Lionel Messi on to Inter Miami’s pitch as a Major League Soccer pl…",
+      "url": "https://www.theguardian.com/football/2023/jul/20/lionel-messis-biggest-impact-in-mls-wont-be-on-the-pitch",
+      "urlToImage": "https://i.guim.co.uk/img/media/4937cd1e16e1ce04844026f9e0bd10d89f48b5c7/0_95_2850_1710/master/2850.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=45b8931e3ada505787f15cdaf199db35",
+      "publishedAt": "2023-07-20T08:00:24Z",
+      "content": "The symbolism of David Beckham welcoming Lionel Messi on to Inter Miamis pitch as a Major League Soccer player for the first time was unavoidable. Beckham was, after all, the catalyst for the growth … [+5119 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Genbeta.com"
+      },
+      "author": "Bárbara Bécares",
+      "title": "La tasa Google desaparecerá de España sin casi haberse aplicado. Prometía ganar 1.000 millones al año",
+      "description": "Tras varias idas y venidas en el Congreso y disputas con Estados Unidos, en 2021 entró en vigor la conocida como \"tasa Google\": el cobro un impuesto del 3% a las grandes tecnológicas. Hace apenas unos meses que empresas como Apple empezaron a aplicarla.\n<!-- …",
+      "url": "https://www.genbeta.com/actualidad/tasa-google-desaparecera-espana-casi-haberse-aplicado-prometia-ganar-1-000-millones-al-ano",
+      "urlToImage": "https://i.blogs.es/69febc/the-new-york-public-library-kajlrqwt5yy-unsplash/840_560.jpeg",
+      "publishedAt": "2023-07-20T08:06:05Z",
+      "content": "Tras varias idas y venidas en el Congreso y disputas con Estados Unidos, en 2021 entró en vigor la conocida como \"tasa Google\": el cobro un impuesto del 3% a las grandes tecnológicas. Hace apenas uno… [+1705 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Genbeta.com"
+      },
+      "author": "Marcos Merino",
+      "title": "Nearby Share de Google ya está disponible para todos los usuarios de Windows: así podrás compartir archivos entre smartphone y PC",
+      "description": "En el mundo actual, compartir archivos entre dispositivos—y lo más fácilmente posible— se ha convertido en una función imprescindible. Ante esta demanda, Google ha dado un paso significativo al lanzar oficialmente 'Nearby Share', una herramienta que permite a…",
+      "url": "https://www.genbeta.com/windows/nearby-share-google-esta-disponible-para-todos-usuarios-windows-asi-podras-compartir-archivos-smartphone-pc",
+      "urlToImage": "https://i.blogs.es/229fb9/nearby0/840_560.jpeg",
+      "publishedAt": "2023-07-20T18:24:08Z",
+      "content": "En el mundo actual, compartir archivos entre dispositivosy lo más fácilmente posible se ha convertido en una función imprescindible. Ante esta demanda, Google ha dado un paso significativo al lanzar … [+2815 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Jess Pingrey)",
+      "title": "Daily deals: $749 MacBook Air, $99 Apple TV, Apple Pencil $89, $50 off Apple Magic Keyboard",
+      "description": "Today's hottest deals include $200 off a Breville Barista Express espresso machine, $800 off a MacBook Pro & AppleCare kit, 36% off a 50\" Fire 4K UHD Smart TV, 54% off Google Pixel 4, and more.Get an Asus ProArt Monitor for $224The AppleInsider team scours th…",
+      "url": "https://appleinsider.com/articles/23/07/20/daily-deals-749-macbook-air-99-apple-tv-apple-pencil-89-50-off-apple-magic-keyboard",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55484-112676-daily-deals-July-20-xl.jpg",
+      "publishedAt": "2023-07-20T14:05:36Z",
+      "content": "Get an Asus ProArt Monitor for $224\r\nToday's hottest deals include $200 off a Breville Barista Express espresso machine, $800 off a MacBook Pro &amp; AppleCare kit, 36% off a 50\" Fire 4K UHD Smart TV… [+4008 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Evan Selleck)",
+      "title": "Apple Store Tice's Corner set to reopen on July 22, 2023",
+      "description": "Apple is currently in the process of opening or remodeling around 50 stores across the globe, and Tice's Corner is one of the first to reopen on July 22.Apple Tice's CornerThe company really kicked things off in 2023 with the grand reopening of its first Appl…",
+      "url": "https://appleinsider.com/articles/23/07/20/apple-store-tices-corner-set-to-reopen-on-july-22-2023",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55500-112694-Tice-xl.jpg",
+      "publishedAt": "2023-07-20T19:59:42Z",
+      "content": "Apple Tice's Corner\r\nApple is currently in the process of opening or remodeling around 50 stores across the globe, and Tice's Corner is one of the first to reopen on July 22.\r\nThe company really kick… [+1313 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Mike Wuerthele)",
+      "title": "Apple hitting problems with iPhone 15 Pro display assembly",
+      "description": "A report from the supply chain claims that Apple is having problems with LG displays and a new manufacturing process for the iPhone 15 Pro models — but it's not clear if it will have any significant impact on launch schedule.Thursday's report on iPhone 15 Pro…",
+      "url": "https://appleinsider.com/articles/23/07/20/apple-hitting-problems-with-iphone-15-pro-display-assembly",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55101-111841-53158-106512-iPhone-15-Ultra-selfie-xl-xl.jpg",
+      "publishedAt": "2023-07-20T16:38:38Z",
+      "content": "A report from the supply chain claims that Apple is having problems with LG displays and a new manufacturing process for the iPhone 15 Pro models — but it's not clear if it will have any significant … [+1598 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Evan Selleck)",
+      "title": "Apple adds a new security section to its enterprise site",
+      "description": "Apple has added a brand new section to its enterprise website to promote its built-in security efforts like encryption, FileVault, and much more.Apple PasskeyApple's enterprise website, part of the \"Apple at Work\" initiative, has been around for a stretch alr…",
+      "url": "https://appleinsider.com/articles/23/07/20/apple-adds-a-new-security-section-to-its-enterprise-site",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55501-112695-Apple-Passkey-xl.jpg",
+      "publishedAt": "2023-07-20T20:24:33Z",
+      "content": "Apple Passkey\r\nApple has added a brand new section to its enterprise website to promote its built-in security efforts like encryption, FileVault, and much more.\r\nApple's enterprise website, part of t… [+1417 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Andrew Orr)",
+      "title": "Zagg's latest keyboards combine ergonomics & efficiency for Apple devices",
+      "description": "Zagg has launched a collection of three desktop keyboards in different sizes, incorporating ergonomic designs to minimize typing fatigue while delivering a fast and efficient typing experience.Zagg has new desktop keyboardsThe company's latest offerings cater…",
+      "url": "https://appleinsider.com/articles/23/07/20/zaggs-latest-keyboards-combine-ergonomics-efficiency-for-apple-devices",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55495-112687-zagg-pro-15-xl.jpg",
+      "publishedAt": "2023-07-20T17:05:25Z",
+      "content": "Zagg has new desktop keyboards\r\nZagg has launched a collection of three desktop keyboards in different sizes, incorporating ergonomic designs to minimize typing fatigue while delivering a fast and ef… [+3076 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Andrew Orr)",
+      "title": "Competitors are on edge as Apple Pay Later surges in popularity",
+      "description": "Since its launch in March, Apple Pay Later, despite still being tested with a small user base, has already surpassed competing brands in terms of usage.Apple Pay Later is quickly gaining tractionApple Pay Later was announced in 2022 but faced several delays. …",
+      "url": "https://appleinsider.com/articles/23/07/20/competitors-are-on-edge-as-apple-pay-later-surges-in-popularity",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55497-112691-apple-pay-later-xl.jpg",
+      "publishedAt": "2023-07-20T18:30:58Z",
+      "content": "Apple Pay Later is quickly gaining traction\r\nSince its launch in March, Apple Pay Later, despite still being tested with a small user base, has already surpassed competing brands in terms of usage.\r\n… [+2449 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (William Gallagher)",
+      "title": "Future MacBook Pro could get force sensitive 3D Touch screen",
+      "description": "Touch screens on the MacBook Pro haven't arrived yet, but Apple is working on inventing a force-sensitive display for the line — and maybe a revamped Touch Bar, too.The Touch Bar could come back as force-sensitive — and the main display could add that, tooThe…",
+      "url": "https://appleinsider.com/articles/23/07/20/future-macbook-pro-could-get-force-sensitive-3d-touch-screen",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55489-112673-000-lead-Display-and-Touch-Bar-xl.jpg",
+      "publishedAt": "2023-07-20T12:02:01Z",
+      "content": "The Touch Bar could come back as force-sensitive -- and the main display could add that, too\r\nTouch screens on the MacBook Pro haven't arrived yet, but Apple is working on inventing a force-sensitive… [+3386 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Mike Wuerthele)",
+      "title": "Apple threatens to kill iMessage & FaceTime in UK if controversial law passes",
+      "description": "Apple is refusing to compromise iPhone and Mac security, and will cut off FaceTime and iMessage in the UK should the new Online Safety Bill challenging end-to-end encryption is passed as it stands.UK Houses of ParliamentApple made its position clear on the On…",
+      "url": "https://appleinsider.com/articles/23/07/20/apple-threatens-to-kill-imessage-facetime-in-uk-if-controversial-law-passes",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55128-111904-54139-109079-48836-95405-000-lead-UK-xl-xl-xl.jpg",
+      "publishedAt": "2023-07-20T12:30:00Z",
+      "content": "UK Houses of Parliament\r\nApple is refusing to compromise iPhone and Mac security, and will cut off FaceTime and iMessage in the UK should the new Online Safety Bill challenging end-to-end encryption … [+2521 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Christine McKee)",
+      "title": "Save $50 on Apple's new Beats Studio Pro wireless headphones",
+      "description": "Save $50 off retail when you order Beats Studio Pro Wireless Headphones at B&H. But don't delay, as this could be a pricing mistake and the offer may end at any time.The AppleInsider Deals Team is tracking the best Beats Studio Pro prices, and B&H's $50 disco…",
+      "url": "https://appleinsider.com/articles/23/07/20/save-50-on-apples-new-beats-studio-pro-wireless-headphones",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55487-112671-beats-studio-pro-deal-xl.jpg",
+      "publishedAt": "2023-07-20T06:18:38Z",
+      "content": "Save $50 off retail when you order Beats Studio Pro Wireless Headphones at B&amp;H. But don't delay, as this could be a pricing mistake and the offer may end at any time.\r\nThe AppleInsider Deals Team… [+1189 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (William Gallagher)",
+      "title": "iPhone 15 launch may be delayed \"weeks,\" says analyst",
+      "description": "Bank of America analyst Wamsi Mohan claims that supply chain checks show the launch of the iPhone 15 range could be pushed back into October.iPhone 15 Pro render. Source: AppleInsiderMohan appears to be the only analyst predicting a delay, and he has made a s…",
+      "url": "https://appleinsider.com/articles/23/07/20/iphone-15-launch-may-be-delayed-weeks-says-analyst",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55488-112672-000-lead-iPhone-15-Pro-render-xl.jpg",
+      "publishedAt": "2023-07-20T10:33:46Z",
+      "content": "iPhone 15 Pro render. Source: AppleInsider\r\nBank of America analyst Wamsi Mohan claims that supply chain checks show the launch of the iPhone 15 range could be pushed back into October.\r\nMohan appear… [+1080 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Christine McKee)",
+      "title": "Today only: 16-inch MacBook Pro with M1 Max, 64GB RAM, 4TB SSD on sale for $2,999",
+      "description": "Save up to $1,970 on a top-of-the-line 16-inch MacBook Pro during B&H's 24-hour Deal Zone, delivering the lowest price available.Save up to $1,970 instantly.24-hour MacBook Pro sale Read more...",
+      "url": "https://appleinsider.com/articles/23/07/20/today-only-16-inch-macbook-pro-with-m1-max-64gb-ram-4tb-ssd-on-sale-for-2999",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55485-112667-macbook-pro-deal-zone-bh-july-2023-xl.jpg",
+      "publishedAt": "2023-07-20T04:30:58Z",
+      "content": "Save up to $1,970 instantly.\r\nSave up to $1,970 on a top-of-the-line 16-inch MacBook Pro during B&amp;H's 24-hour Deal Zone, delivering the lowest price available.\r\nThe MacBook Pro deals are valid to… [+1197 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Wesley Hilliard)",
+      "title": "'Pokemon Sleep' launches in the US, but it's more game than sleep tracker",
+      "description": "\"Pokemon Sleep\" is a cute sleep tracker that gamifies sleeping schedules to motivate users to get to bed on time, though it's lacking core features for iPhone users.'Pokemon Sleep'The Pokemon Company announced Pokemon Sleep in 2019 with a 2020 launch window, …",
+      "url": "https://appleinsider.com/articles/23/07/20/pokemon-sleep-launches-in-the-us-but-its-more-game-than-sleep-tracker",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55486-112669-sleep-xl.jpg",
+      "publishedAt": "2023-07-20T02:26:38Z",
+      "content": "'Pokemon Sleep'\r\n\"Pokemon Sleep\" is a cute sleep tracker that gamifies sleeping schedules to motivate users to get to bed on time, though it's lacking core features for iPhone users.\r\nThe Pokemon Com… [+1875 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Andrew Orr)",
+      "title": "New iPhone 15 Pro rumor backs Wi-Fi 6E making first appearance",
+      "description": "A new rumor aligns with previous claims that the upcoming iPhone 15 Pro models will be equipped with the latest Wi-Fi 6E technology, enabling high-speed wireless connectivity.iPhone 15 Pro models may get Wi-Fi 6EIn January, a credible leaker known as \"Unknown…",
+      "url": "https://appleinsider.com/articles/23/07/20/new-rumor-backs-wi-fi-6e-making-appearance-in-iphone-15-pro",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55492-112679-iPhone-15-pro-max-render-xl.jpg",
+      "publishedAt": "2023-07-20T14:27:16Z",
+      "content": "iPhone 15 Pro models may get Wi-Fi 6E\r\nA new rumor aligns with previous claims that the upcoming iPhone 15 Pro models will be equipped with the latest Wi-Fi 6E technology, enabling high-speed wireles… [+1310 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (William Gallagher)",
+      "title": "iPhone SE 4 won't launch until 2025, say analysts",
+      "description": "Backing up previous rumors, analysts from Barclays claim that supply chain sources say the iPhone SE 4 has been pushed back a year to 2025.Previous iPhone SE modelsThe expected iPhone SE 4 has been on, off, and on again, in a range of forms even including an …",
+      "url": "https://appleinsider.com/articles/23/07/20/iphone-se-4-wont-launch-until-2025-say-analysts",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55231-112184-000-lead-iPhone-SE-xl.jpg",
+      "publishedAt": "2023-07-20T14:22:52Z",
+      "content": "Previous iPhone SE models\r\nBacking up previous rumors, analysts from Barclays claim that supply chain sources say the iPhone SE 4 has been pushed back a year to 2025.\r\nThe expected iPhone SE 4 has be… [+1112 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Christine McKee)",
+      "title": "Prime Day pricing returns with $749 MacBook Air deal at Amazon",
+      "description": "Amazon's M1 MacBook Air deal is back, marking the return of Prime Day 2023 pricing on the popular ultraportable laptop.Prime Day MacBook Air pricing returns.The $749.99 price is valid on the standard M1 MacBook Air 13-inch featuring a 7-core GPU, 8GB of memor…",
+      "url": "https://appleinsider.com/articles/23/07/20/prime-day-pricing-returns-with-749-macbook-air-deal-at-amazon",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55494-112684-macbook-air-m1-749-xl.jpg",
+      "publishedAt": "2023-07-20T15:20:43Z",
+      "content": "Prime Day MacBook Air pricing returns.\r\nAmazon's M1 MacBook Air deal is back, marking the return of Prime Day 2023 pricing on the popular ultraportable laptop.\r\nThe $749.99 price is valid on the stan… [+888 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (William Gallagher)",
+      "title": "How to use the new Reminders features in macOS Sonoma",
+      "description": "Apple has only added a couple of quite minor updates to Reminders for macOS Sonoma, but they're thoughtful ones that will make a difference. Here's what's new and how to use it all.Reminders is a peculiar app in that it's not powerful enough to threaten the m…",
+      "url": "https://appleinsider.com/inside/macos-sonoma/tips/how-to-use-the-new-reminders-features-in-macos-sonoma",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55478-112682-000-lead-Reminders-xl.jpg",
+      "publishedAt": "2023-07-20T15:02:14Z",
+      "content": "Apple has only added a couple of quite minor updates to Reminders for macOS Sonoma, but they're thoughtful ones that will make a difference. Here's what's new and how to use it all.\r\nReminders is a p… [+5191 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Amanda Laskin)",
+      "title": "Learn languages with Rosetta Stone's lifetime subscription, now $159.97",
+      "description": "Dreaming of learning a new language? Get a Rosetta Stone lifetime subscription for under $160 with coupon, giving you the opportunity to expand your linguistic horizons.Embark on a journey to upgrade your communication skills with Rosetta Stone. With a lifeti…",
+      "url": "https://appleinsider.com/articles/23/07/20/learn-languages-with-rosetta-stones-lifetime-subscription-now-15997",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55480-112668-rosetta-stone-bundle-deal-xl.jpg",
+      "publishedAt": "2023-07-20T01:52:51Z",
+      "content": "Dreaming of learning a new language? Get a Rosetta Stone lifetime subscription for under $160 with coupon, giving you the opportunity to expand your linguistic horizons.\r\nEmbark on a journey to upgra… [+2160 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Amanda Laskin)",
+      "title": "Take 81% off a standalone Microsoft Office 2021 license for Windows or Mac",
+      "description": "If you've been searching for an affordable way to access Microsoft Office's powerful suite of applications, this limited-time offer discounts a standalone Office 2021 license for Windows or Mac to just $39.99.Microsoft Office for Mac or PC at an unbeatable pr…",
+      "url": "https://appleinsider.com/articles/23/07/20/take-81-off-a-standalone-microsoft-office-2021-license-for-windows-or-mac",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55459-112659-6-xl.jpg",
+      "publishedAt": "2023-07-20T18:06:29Z",
+      "content": "If you've been searching for an affordable way to access Microsoft Office's powerful suite of applications, this limited-time offer discounts a standalone Office 2021 license for Windows or Mac to ju… [+3849 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "AppleInsider"
+      },
+      "author": "news@appleinsider.com (Evan Selleck)",
+      "title": "Apple's AirTag helps a magician find his lost bag at Newark airport",
+      "description": "Apple's AirTag item tracker has come in handy for a lot of people since the accessory launched, and now it's even helped a magician find his missing bag at an airport.Apple AirTagSome AirTag owners who have had their belongings stolen have used the item track…",
+      "url": "https://appleinsider.com/articles/23/07/20/apples-airtag-helps-a-magician-find-his-lost-bag-at-newark-airport",
+      "urlToImage": "https://photos5.appleinsider.com/gallery/55502-112702-Apple-AirTag-xl.jpg",
+      "publishedAt": "2023-07-20T21:46:44Z",
+      "content": "Apple AirTag\r\nApple's AirTag item tracker has come in handy for a lot of people since the accessory launched, and now it's even helped a magician find his missing bag at an airport.\r\nSome AirTag owne… [+2712 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Abduzeedo.com"
+      },
+      "author": "abduzeedo",
+      "title": "Apple Watch Face Gallery Animal Illustrations",
+      "description": "Apple Watch Face Gallery Animal Illustrations\n \n\n abduzeedo0719—23\n Diana D'Achille has poured her passion and creativity into designing a free Apple Watch face gallery app, featuring her very own animal illustrations. \r\n\n\nIf you own an Apple Watch and are pa…",
+      "url": "https://abduzeedo.com/node/87959",
+      "urlToImage": null,
+      "publishedAt": "2023-07-20T05:23:27Z",
+      "content": "Diana D'Achille has poured her passion and creativity into designing a free Apple Watch face gallery app, featuring her very own animal illustrations. \r\nIf you own an Apple Watch and are passionate a… [+1767 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Elespanol.com"
+      },
+      "author": "Manuel Ramírez",
+      "title": "Google sube el precio de YouTube Premium y Music: así quedan ambas suscripciones mensuales",
+      "description": "El aumento en el precio de la suscripción a la plataforma de Google es considerable y supone un extra importante para el bolsillo del usuario.",
+      "url": "https://www.elespanol.com/elandroidelibre/noticias-y-novedades/20230720/google-sube-precio-youtube-premium-music-quedan-ambas-suscripciones-mensuales/780421965_0.html",
+      "urlToImage": "https://s1.eestatic.com/2023/07/20/elandroidelibre/noticias-y-novedades/780431992_234827313_1200x630.jpg",
+      "publishedAt": "2023-07-20T06:43:00Z",
+      "content": "Se puede hacer complicado pagar por todos los servicios actuales relacionados con la música, ver series o simplemente que el envío salga gratuito para un pedido hecho online, por lo que al final el u… [+2400 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Gizmodo.jp"
+      },
+      "author": "そうこ",
+      "title": "Apple開発の生成AI「Apple GPT」はすでに社内テスト中か",
+      "description": "Image:ShutterstockAppleが生成AIを開発しているという話が（やっと）聞こえてきました。通称「AppleGPT」。BloombergのMarkGurman氏は、Appleが開発し、すでに社内でテスト中だとする生成AIについて語っています。AppleGPTを含め、Appleのさまざまなマシンラーニングプロジェクトの基盤となっているのは、同社が2022年に開発を始めた「Ajax」と",
+      "url": "https://www.gizmodo.jp/2023/07/apple-generative-ai-apple-gpt.html",
+      "urlToImage": "https://media.loom-app.com/gizmodo/dist/images/2023/07/20/shutterstock_1856303683.jpg?w=1280&h=630&f=jpg",
+      "publishedAt": "2023-07-20T05:00:00Z",
+      "content": "AppleAIApple GPT\r\nBloombergMark GurmanAppleAI\r\nAppleGPTApple2022Ajax\r\nAppleSiriAIAjaxChatGPT\r\nApple GPT\r\nAppleAI\r\nApple GPT\r\nApple GPTGurmanApple GPT\r\nAppleOpenAIChatGPTGitHub CopilotAING\r\nAIApple\r\nA… [+56 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Windows Central"
+      },
+      "author": "sendicott47@outlook.com (Sean Endicott)",
+      "title": "Microsoft CEO Satya Nadella has now made $1 billion",
+      "description": "Microsoft CEO Satya Nadella has reportedly brought in $1 billion since entering his current role in the company.",
+      "url": "https://www.windowscentral.com/microsoft/microsoft-ceo-satya-nadella-has-now-made-dollar1-billion",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/XEFfyKGmMzzxDZpZrnh7VM-1200-80.jpg",
+      "publishedAt": "2023-07-20T19:14:24Z",
+      "content": "What you need to know\r\n<ul><li>Microsoft CEO Satya Nadella has reportedly brought in $1 billion since he entered his current role at Microsoft.</li><li>That figure includes Nadella's equity grants, s… [+2437 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Uncrate.com"
+      },
+      "author": "Uncrate",
+      "title": "Regimen: Get Ready",
+      "description": "Marvis Travel Toothbrush / $6. Angle Razor / $125. Homme Post Shave Lotion / $25. Oxford Hill Natural Clay Pomade / $27. Wayne Enterprises X Uncrate X Patricks WE1 Deodorant / $60....",
+      "url": "https://uncrate.com/regimen-get-ready/",
+      "urlToImage": "https://uncrate.com/p/2023/07/regimen-get-ready.jpg",
+      "publishedAt": "2023-07-20T19:56:32Z",
+      "content": "MobyFox's straps elevate your smartwatches with references to your favorite movies and teams, but the transformation doesn't stop there. With every band purchase, customers get a QR code and gain acc… [+394 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Journal du geek"
+      },
+      "author": "Thomas Estimbre",
+      "title": "Samsung Galaxy Ring : la bague connectée se précise, à quoi faut-il s’attendre ?",
+      "description": "En plus des montres connectées, Samsung prépare une bague connectée. Appelée Galaxy Ring, serait encore plus précise que les Galaxy Watch.\nSamsung Galaxy Ring : la bague connectée se précise, à quoi faut-il s’attendre ?",
+      "url": "https://www.journaldugeek.com/2023/07/20/samsung-galaxy-ring-la-bague-connectee-se-precise-a-quoi-faut-il-sattendre/",
+      "urlToImage": "https://www.journaldugeek.com/content/uploads/2023/07/bague-oura-3.jpg",
+      "publishedAt": "2023-07-20T06:00:27Z",
+      "content": "En plus des montres connectées, Samsung prépare une bague connectée. Appelée Galaxy Ring, serait encore plus précise que les Galaxy Watch.Les wearables occupent une place importante chez Samsung, et … [+3354 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Applesfera.com"
+      },
+      "author": "Fran Bouzas",
+      "title": "Mundial de fútbol femenino 2023: dónde ver gratis los partidos de la Selección Española desde tu Apple TV",
+      "description": "El mundial de fútbol femenino está a la vuelta de la esquina. De hecho, comienza hoy. Durará hasta el 20 de agosto y se juega en Australia y Nueva Zelanda, las antípodas de España. Hace cuatro años nuestra selección llegó a dieciseisavos de final, donde perdi…",
+      "url": "https://www.applesfera.com/tutoriales/mundial-futbol-femenino-2023-donde-ver-gratis-partidos-seleccion-espanola-tu-apple-tv",
+      "urlToImage": "https://i.blogs.es/a4ae43/espana-fem_1if6l5r7h8o4a1uts6t4mzaokh/840_560.jpeg",
+      "publishedAt": "2023-07-20T13:11:38Z",
+      "content": "El mundial de fútbol femenino está a la vuelta de la esquina. De hecho, comienza hoy. Durará hasta el 20 de agosto y se juega en Australia y Nueva Zelanda, las antípodas de España. Hace cuatro años n… [+2070 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Applesfera.com"
+      },
+      "author": "Fran Bouzas",
+      "title": "Apple TV+ publica material extra de 'Ted Lasso', alimentando la esperanza de spin-off o temporada cuatro de su serie más querida",
+      "description": "No hay duda de que Ted Lasso es de las series más exitosas que ha producido hasta ahora Apple. Una comedia sobre un entrenador sin mucha experiencia que llega a lo más alto del fútbol inglés a entrenar a un equipo de fútbol profesional. Las risas están garant…",
+      "url": "https://www.applesfera.com/servicios-apple/apple-tv-publica-material-extra-ted-lasso-alimentando-esperanza-spin-off-temporada-cuatro-su-serie-querida",
+      "urlToImage": "https://i.blogs.es/c202cf/apple-emmy-winner-sept-2022-ted-lasso.jpg.landing-big_2x/840_560.jpeg",
+      "publishedAt": "2023-07-20T16:37:47Z",
+      "content": "No hay duda de que Ted Lasso es de las series más exitosas que ha producido hasta ahora Apple. Una comedia sobre un entrenador sin mucha experiencia que llega a lo más alto del fútbol inglés a entren… [+1921 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Applesfera.com"
+      },
+      "author": "Jesús Quesada",
+      "title": "El teléfono reacondicionado más vendido de Amazon es este iPhone compatible con iOS 17, Face ID y 5G",
+      "description": "Los dispositivos reacondicionados son una buena manera de renovar el teléfono ahorrando un buen dinero. Si quieres cambiar de teléfono, el iPhone 12 de 128 GB es el smartphone reacondicionado más vendido de Amazon y se puede adquirir por 489 euros. Está respa…",
+      "url": "https://www.applesfera.com/seleccion/telefono-reacondicionado-vendido-amazon-este-iphone-compatible-ios-17-face-id-5g",
+      "urlToImage": "https://i.blogs.es/9a3b38/apple-iphone-12-final/840_560.jpeg",
+      "publishedAt": "2023-07-20T15:33:08Z",
+      "content": "Los dispositivos reacondicionados son una buena manera de renovar el teléfono ahorrando un buen dinero. Si quieres cambiar de teléfono, el iPhone 12 de 128 GB es el smartphone reacondicionado más ven… [+4073 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Applesfera.com"
+      },
+      "author": "Miguel López",
+      "title": "Google presenta Nearby Share en Windows, su propio AirDrop del que todavía tiene mucho que aprender de Apple",
+      "description": "La integración entre los dispositivos es, de calle, mi argumento favorito a la hora de defender a Apple en un debate. No sólo porque configurarlos es cuestión de pocos minutos, si no porque tienes muchas funciones que funcionan prácticamente solas entre el Ap…",
+      "url": "https://www.applesfera.com/servicios-apple/google-presenta-nearby-share-windows-su-propio-airdrop-que-todavia-tiene-mucho-que-aprender-apple",
+      "urlToImage": "https://i.blogs.es/1a77de/nearby-share-airdrop/840_560.jpeg",
+      "publishedAt": "2023-07-20T15:41:09Z",
+      "content": "La integración entre los dispositivos es, de calle, mi argumento favorito a la hora de defender a Apple en un debate. No sólo porque configurarlos es cuestión de pocos minutos, si no porque tienes mu… [+2626 chars]"
+    },
+
+
+    {
+      "source": {
+        "id": "techcrunch",
+        "name": "TechCrunch"
+      },
+      "author": "Tage Kene-Okafor",
+      "title": "Kasha raises $21M Series B led by Knife Capital to expand health access platform across Africa | TechCrunch",
+      "description": "While the pandemic made investors pay attention to Africa’s private healthcare space, women's health is subtly neglected.",
+      "url": "https://techcrunch.com/2023/07/20/kasha-raises-21m-series-b-led-by-knife-capital-to-expand-health-access-platform-across-africa/",
+      "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/07/DC770C12-88FC-4E08-A72D-17B34FC4D295.jpeg?w=1169",
+      "publishedAt": "2023-07-21T00:18:40Z",
+      "content": "As Africas youthful population continues to grow exponentially, its of the utmost importance that entrepreneurs create various healthcare solutions that will cater to the medical needs of the contine… [+7403 chars]"
+    },
+    {
+      "source": {
+        "id": "techcrunch",
+        "name": "TechCrunch"
+      },
+      "author": "Rebecca Bellan",
+      "title": "Autonomous vehicle company Aurora sells $820M worth of stock | TechCrunch",
+      "description": "Aurora Innovation has sold $820 million worth of stock, funds that will be used to see the autonomous trucking company to commercialization.",
+      "url": "https://techcrunch.com/2023/07/20/av-company-aurora-innovation-sells-820m-worth-of-stock/",
+      "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/04/aurora-chris-urmson.jpeg?resize=1200,800",
+      "publishedAt": "2023-07-20T23:06:32Z",
+      "content": "Aurora Innovation, the self-driving technology company that aims to launch an autonomous trucking business in 2024, has completed a capital raise of $820 million from a public and concurrent private … [+2978 chars]"
+    },
+    {
+      "source": {
+        "id": "techcrunch",
+        "name": "TechCrunch"
+      },
+      "author": "Aria Alamalhodaei",
+      "title": "SpaceX’s Swarm Technologies is halting new device sales | TechCrunch",
+      "description": "Swarm, the Internet-of-Things connectivity provider that was acquired by SpaceX, will no longer be selling new devices.",
+      "url": "https://techcrunch.com/2023/07/20/spacexs-swarm-technologies-is-halting-new-device-sales/",
+      "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/12/swarm_spacebee.png?w=800",
+      "publishedAt": "2023-07-20T22:07:24Z",
+      "content": "Swarm, the Internet-of-Things connectivity provider that was acquired by SpaceX, will no longer be selling new devices, according to an email sent to customers earlier this month.\r\nThe news appears t… [+1642 chars]"
+    },
+    {
+      "source": {
+        "id": "techcrunch",
+        "name": "TechCrunch"
+      },
+      "author": "Rebecca Bellan",
+      "title": "Cruise starts initial robotaxi testing in Miami | TechCrunch",
+      "description": "General Motors' Cruise has begun testing its autonomous vehicles and collecting data on the streets of Miami, Florida.",
+      "url": "https://techcrunch.com/2023/07/20/cruise-starts-initial-robotaxi-testing-in-miami/",
+      "urlToImage": "https://techcrunch.com/wp-content/uploads/2021/06/Screen-Shot-2021-06-15-at-7.26.26-AM.png?resize=1200,674",
+      "publishedAt": "2023-07-20T21:48:39Z",
+      "content": "Cruise, the self-driving arm of General Motors, has begun initial testing and data collection in Miami, the company said in a tweet Wednesday.\r\n“Phase 1 is to familiarize our fleet with additional, d… [+2279 chars]"
+    },
+    {
+      "source": {
+        "id": "techcrunch",
+        "name": "TechCrunch"
+      },
+      "author": "Haje Jan Kamps",
+      "title": "VR is dead | TechCrunch",
+      "description": "That’s because VR — like Meta Quest 2 — and even AR, to some extent, like Apple Vision Pro, are missing one crucial thing.",
+      "url": "https://techcrunch.com/2023/07/20/vr-is-dead/",
+      "urlToImage": "https://techcrunch.com/wp-content/uploads/2022/04/GettyImages-1359208021.jpg?resize=1200,800",
+      "publishedAt": "2023-07-20T21:30:39Z",
+      "content": "Its hard to believe that it was only 11 years ago that VR captured the zeitgeist. In April 2012, Oculus hit Kickstarter with the Oculus Rift developer kit, and the tech world whipped itself into a th… [+1028 chars]"
+    },
+    {
+      "source": {
+        "id": "techcrunch",
+        "name": "TechCrunch"
+      },
+      "author": "Lauren Simonds",
+      "title": "Expo+ Pass: The affordable TechCrunch Disrupt 2023 experience | TechCrunch",
+      "description": "Access opportunities on the expo floor — and so much more — with an Expo+ pass to TechCrunch Disrupt 2023. The price goes up in August.",
+      "url": "https://techcrunch.com/2023/07/20/expo-pass-the-affordable-techcrunch-disrupt-2023-experience/",
+      "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/07/expo_hall.png?resize=1200,675",
+      "publishedAt": "2023-07-20T20:14:36Z",
+      "content": "Whether youre short on time or short on cash, you can still find plenty of exciting opportunities at TechCrunch Disrupt 2023, taking place September 1921 in San Francisco. The Expo+ pass is the perfe… [+1621 chars]"
+    },
+    {
+      "source": {
+        "id": "techcrunch",
+        "name": "TechCrunch"
+      },
+      "author": "Rhys Spence",
+      "title": "It’s been a bumpy 6 months for edtech — are smoother roads ahead? | TechCrunch",
+      "description": "Edtech continued to stutter, not just due to unexpectedly negative results, but also by merely acknowledging the risks of generative AI.",
+      "url": "https://techcrunch.com/2023/07/20/h1-2023-edtech-venture-capital-trends/",
+      "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/07/GettyImages-1304822844.jpg?resize=1200,800",
+      "publishedAt": "2023-07-20T20:14:06Z",
+      "content": "More posts by this contributor\r\nIt has been a bumpy six months for the global startup ecosystem. It has been equal parts exciting and alarming to see the advancement of generative AI conversations wi… [+3818 chars]"
+    },
+    {
+      "source": {
+        "id": "techcrunch",
+        "name": "TechCrunch"
+      },
+      "author": "Aisha Malik",
+      "title": "Twitter is prepping a job listings feature for verified organizations | TechCrunch",
+      "description": "Twitter appears to be prepping a feature that allows verified organizations on the platform to post job listings to their profiles.",
+      "url": "https://techcrunch.com/2023/07/20/twitter-prepping-job-listings-feature-verified-organizations/",
+      "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/05/GettyImages-1244881807.jpg?resize=1200,675",
+      "publishedAt": "2023-07-20T20:05:29Z",
+      "content": "Twitter appears to be prepping a feature that allows verified organizations on the platform to post job listings on their profiles. The social media giant has also created an official @TwitterHiring … [+2395 chars]"
+    },
+    {
+      "source": {
+        "id": "techcrunch",
+        "name": "TechCrunch"
+      },
+      "author": "Jacquelyn Melinek",
+      "title": "Here’s an EthCC recap for those who couldn’t make it to Paris this year | TechCrunch",
+      "description": "The Paris-based Ethereum Community Conference, EthCC, happened this week and brought in over 350 speakers. Here's a recap.",
+      "url": "https://techcrunch.com/2023/07/20/ethcc-ethereum-conference-recap-paris-2023/",
+      "urlToImage": "https://techcrunch.com/wp-content/uploads/2017/09/vitalik-buterin-147a2587.jpg?resize=1200,800",
+      "publishedAt": "2023-07-20T17:14:58Z",
+      "content": "To get a roundup of TechCrunchs biggest and most important crypto stories delivered to your inbox every Thursday at 12 p.m. PT, subscribe here.\r\nWelcome back to Chain Reaction.\r\nThe Paris-based Ether… [+7264 chars]"
+    },
+    {
+      "source": {
+        "id": "techcrunch",
+        "name": "TechCrunch"
+      },
+      "author": "Zack Whittaker",
+      "title": "Fake passports, real bank accounts: How TheTruthSpy stalkerware made its millions | TechCrunch",
+      "description": "A network of fake sellers, created with forged documents, allowed a global phone surveillance ring to operate under the radar for years.",
+      "url": "https://techcrunch.com/2023/07/20/thetruthspy-stalkerware-forged-passports-millions/",
+      "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/07/thetruthspy-1-hero-image.jpg?resize=1200,675",
+      "publishedAt": "2023-07-20T15:02:12Z",
+      "content": "Benjamin, 44, has a place by the park in an up-and-coming area of downtown Dallas, Texas. He seems to keep to himself and eschews social media. Dulce, 42, lives nearby in a gated community lined with… [+20444 chars]"
     }
   ]
 
 
 
 
+
+
   constructor() {
     super();
-    console.log("i am constructor");
+
     this.state = {
 
-      articles: this.articles,
+      articles: [],
+
       loading: false,
+      page: 1
+
+
+
+
+
+    };
+
+  }
+
+  async componentDidMount() {
+    let url = ` https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=61924b647daa493abcd25e9f5df57755&page=1pageSize=${this.props.pageSize}`;
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    
+    this.setState({ articles: parsedData.articles, totalResults: parsedData.totalResults })
+  }
+  handlepreclick = async () => {
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=61924b647daa493abcd25e9f5df57755&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    
+
+
+    this.setState({
+      page: this.state.page - 1,
+      articles: parsedData.articles
+    })
+
+  }
+  handlenextclick = async () => {
+    if (this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pagesize)) {
+
+
+    } else {
+
+
+
+      let url = ` https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=61924b647daa493abcd25e9f5df57755&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
+
+      let data = await fetch(url);
+      let parsedData = await data.json();
       
 
 
+      this.setState({
+        page: this.state.pageSize + 1,
+        articles: parsedData.articles,
+      })
     }
-
-  }
- async componentDidMount(){
-    let url= " https://newsapi.org/v2/top-headlines?country=in&apiKey=61924b647daa493abcd25e9f5df57755&page=1&pagesize=20";
-    let data= await fetch(url);
-    let parsedData= await data.jason();
-    console.log(parsedData);
-    this.setState({articles:parsedData.articles})
-  }
-  handlepreclick=async ()=>{
-    let url= ` https://newsapi.org/v2/top-headlines?country=in&apiKey=61924b647daa493abcd25e9f5df57755&page=${this.state.page-1}&pagesize=20`;
-    let data= await fetch(url);
-    let parsedData= await data.jason();
-    console.log(parsedData);
-    
-
-this.state({
-  page:this.state.page-1,
-  articles:parsedData.articles
-})
-
-  }
-  handlenextclick=async()=>{
-
-    let url= ` https://newsapi.org/v2/top-headlines?country=in&apiKey=61924b647daa493abcd25e9f5df57755&page=${this.state.page+1}&pagesize=20`;
-    let data= await fetch(url);
-    let parsedData= await data.jason();
-    console.log(parsedData);
-    
-
-this.state({
-  page:this.state.page+1,
-  articles:parsedData.articles
-})
 
 
   }
@@ -1362,26 +2826,28 @@ this.state({
     return (
       <div className='container my-3'>
 
-        <h2> newsmonkey - Top Headlines</h2>
+        <h2 className='text-center'style={{margin:'40px  0px'}}> newsmonkey - Top Headlines</h2>
+
+
         < div className=' row'>
           {this.state.articles.map((element) => {
 
-          return  <div className='col-md-3' key={element.url}>
-              <NewsItem tittle={element.tittle?element.title.slice(0,45):""} descryption={element.description?element.description.slice(0,88):""}urlToImage={element.urlToImage} newsUrl={element.url} />
+            return <div className='col-md-3' key={element.url}>
+              <NewsItem tittle={element.tittle ? element.title.slice(0, 45) : ""} descryption={element.description ? element.description.slice(0, 88) : ""} urlToImage={element.urlToImage} newsUrl={element.url} />
             </div>
 
 
           })}
-         <div className=' container d-flex justify-content-around'>
-          <button disabled={this.state.page<=1} type="button" class="btn btn-dark" onClick={this.handlepreclick}>&larr; previous</button>
-<button type="button" class="btn btn-dark"onClick={this.handlenextclick}>next &larr;</button>
 
-</div>
+          <div className=' container d-flex justify-content-between'>
+            <button disabled={this.state.page <= 1} type="button" className="btn btn-dark" onClick={this.handlepreclick}> &larr; previous</button>
+            <button disabled={this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pageSize)} type="button" className="btn btn-dark" onClick={this.handlenextclick}> next &rarr; </button>
 
+          </div>
         </div>
-        </div>
-        
-    
+      </div>
+
+
     )
   }
 }
